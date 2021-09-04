@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(90deg, #4776E6 0%, #8E54E9 100%);
+    min-height: 100vh;
+}
+
+.contenedor {
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.wave {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+}
+
+.contenedor-textos {
+    flex-basis: 50%;
+    padding-left: 40px;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.titulo {
+    font-size: 50px;
+}
+
+.subtitulo {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+.cta {
+    display: inline-block;
+    width: 150px;
+    padding: 15px 0;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #4776E6;
+}
+
+.contenedor-ilustracion {
+    flex-basis: 50%;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    overflow: hidden;
+}
+
+.img {
+    width: 95%;
+    animation: IlustrationAnimate ease-in 1s infinite alternate;
+}
+
+@keyframes IlustrationAnimate {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.04);
+    }
+}
+
+@media screen and (max-width: 800px){
+    .contenedor {
+        flex-direction: column-reverse;
+    }
+
+    .wave {
+        width: 80%;
+    }
+
+    .contenedor-textos {
+        display: flex;
+        padding-left: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 40%;
+        text-align: center;
+    }
+
+    .titulo {
+        font-size: 40px;
+    }
+
+    .subtitulo {
+        font-size: 20px;
+    }
+
+    .contenedor-ilustracion {
+        flex-basis: 60%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .img {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .wave {
+        width: auto;
+        height: 48%;
+    }
+
+    .contenedor-textos {
+        flex-basis: 40%;
+        justify-content: flex-start;
+    }
+
+    .titulo {
+        font-size: 35px;
+    }
+}
