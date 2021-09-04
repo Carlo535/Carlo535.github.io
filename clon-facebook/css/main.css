@@ -1,0 +1,276 @@
+:root {
+    --colorBlue: #1877F2;
+    --colorGreen: #42B72A;
+    --colorMain: #F0F2F5;
+    --colorWhite: #ffffff;
+    --colorText: #1c1e21;
+    --colorLine: #DADDE1;
+    --colorLinks: #8A8D91;
+    --colorBorder: #dddfe2;
+    --colorPlaceholder: #90949C;
+    --colorCopy: #737373;
+}
+
+html {
+  box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*clases generales*/
+.padding-main{
+    padding: 72px 0 112px 0;
+}
+
+.bg {
+    background-color: var(--colorMain);
+}
+
+.bold {
+    font-weight: bold;
+    color: var(--colorText);
+}
+
+.bold:hover {
+    text-decoration: underline;
+}
+
+.contenedor {
+    width: 98rem;
+    margin: 0 auto;
+}
+
+.pd-20 {
+    padding: 2rem 0;
+}
+
+.dos-columnas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3.2rem;
+}
+
+.cont {
+    padding: 112px 0 16px;
+     width: 548px;
+}
+
+.contendor-logo {
+    height: 182.05px;
+}
+
+.logo {
+    width: 301.067px;
+    height: 106px;
+    margin: -28px;
+    margin-bottom: -12px
+}
+
+.eslogan{
+    width: 50rem;
+    padding-bottom: 20px;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 3.2rem;
+    color: var(--colorText);
+}
+
+/*form*/
+.shadow {
+    box-shadow: 0px 5px 7px #cccccc;
+}
+
+.card {
+    width: 396px;
+    height: 349.817px;
+    background-color: var(--colorWhite);
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px 0 24px 0;
+    margin-top: 4rem;
+}
+
+.card input[type="email"], input[type=password] {
+    display: inline-block;
+    width: 364px;
+    height: 52px;
+    padding: 14px 16px;
+    margin: 6px 0 6px 0;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid var(--colorBorder);
+}
+
+.card input[type="email"]::placeholder, input[type="password"]::placeholder {
+    color: var(--colorPlaceholder);
+    font-size: 1.7rem;
+}
+
+.card input[type="email"]:focus, input[type="password"]:focus {
+    border: 1px solid var(--colorBlue);
+    box-shadow: 0px 0px 1px var(--colorBlue);
+}
+
+.card input[type="submit"]:focus {
+    border: 1px solid var(--colorBlue);
+    box-shadow: 0px 0px 3px var(--colorBlue);
+}
+
+.btn-blue {
+    width: 364px;
+    height: 48px;
+    border-radius: 6px;
+    border: none;
+    margin: 1rem 0 1.6rem 0;
+    padding: 0px 16px;
+    background-color: var(--colorBlue);
+    font-size: 2rem;
+    color: var(--colorWhite);
+    font-weight: bold;
+    cursor: pointer;    
+}
+
+.btn-blue:hover {
+    background-color: #1c73e4;
+}
+
+.link {
+    color: var(--colorBlue);
+    font-size: 1.4rem;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.line {
+    height: 1px;
+    border-top: 1px solid var(--colorLine);
+    margin: 2rem 1.6rem 2.6rem 1.6rem;
+}
+
+.btn-green {
+    display: inline-block;
+    width: 189.75px;
+    height: 48px;
+    padding: 15px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: var(--colorGreen);
+    color: var(--colorWhite);
+}
+
+
+.btn-green:hover {
+    background-color: #36A420;
+}
+
+.info {
+    grid-column: 2/3;
+    font-size: 1.4rem;
+    text-align: center;
+    color: var(--colorText);
+    margin: 2.8rem 0 0 0;
+    line-height: 2rem;
+}
+
+
+/*footer*/
+.links {
+    padding-top: 8px;
+}
+
+.links a {
+    color: var(--colorLinks);
+    font-size: 1.2rem;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.links li {
+    display: inline-block;
+    padding-right: 1.5rem;
+}
+
+.line-fo {
+    height: 1px;
+    border-top: 1px solid var(--colorLine);
+    margin: 8px 0 0 0;
+}
+
+.copy {
+    margin: 2.5rem 0;
+    font-size: 1.1rem;
+    color: var(--colorCopy);
+}
+
+
+
+@media only screen and (max-width:1000px){
+    .dos-columnas {
+        grid-template-columns: repeat(1, 1fr);
+        width: 400px;
+        padding-bottom: 5rem;
+
+    }
+
+    .cont {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+    }
+    
+    .card {
+        margin: auto;
+        width: 100%;
+    }
+    
+    .eslogan {
+        font-size: 25px;
+        line-height: 28px;
+        width: 100%
+    }
+    
+    .info {
+        margin: 2.8rem 80px 0 80px;
+    }
+    
+    .link_two {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
